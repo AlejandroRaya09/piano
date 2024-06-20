@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'piano';
+  
+
+  aplicarSonido(indice:number):void{
+    const audio = new Audio();
+    audio.src = '../assets/sonidos/note' + indice +  '.wav';
+    audio.load();
+    audio.play();
+  }
 }
